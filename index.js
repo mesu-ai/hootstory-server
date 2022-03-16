@@ -38,6 +38,16 @@ async function run() {
 
         });
 
+        //delete stories
+
+        app.delete('/hootstory',async(req,res)=>{
+
+          const result= await storiesCollection.remove({});
+          res.json(result);
+
+
+        })
+
 
       console.log("Connected successfully to server");
 
